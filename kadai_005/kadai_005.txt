@@ -1,117 +1,29 @@
-PS C:\Users\093111_226304> mkdir git_challenge
+PS C:\work> mkdir git_challenge
 
 
-    ディレクトリ: C:\Users\093111_226304
+    ディレクトリ: C:\work
 
 
 Mode                 LastWriteTime         Length Name                                 
 ----                 -------------         ------ ----                                 
-d-----        2026/04/24     15:19                git_challenge                        
+d-----        2026/04/24     16:19                git_challenge                        
 
 
-PS C:\Users\093111_226304> cd git_challenge
-PS C:\Users\093111_226304\git_challenge> git init
-Initialized empty Git repository in C:/Users/093111_226304/git_challenge/.git/
-PS C:\Users\093111_226304\git_challenge> git add 
-Nothing specified, nothing added.
-hint: Maybe you wanted to say 'git add .'?
-hint: Disable this message with "git config set advice.addEmptyPathspec false"
-PS C:\Users\093111_226304\git_challenge> git add git_challenge
-fatal: pathspec 'git_challenge' did not match any files
-PS C:\Users\093111_226304\git_challenge> git add
-Nothing specified, nothing added.
-hint: Maybe you wanted to say 'git add .'?
-hint: Disable this message with "git config set advice.addEmptyPathspec false"
-PS C:\Users\093111_226304\git_challenge> echo hello,world! > hello.txt
-PS C:\Users\093111_226304\git_challenge> echo. > hello.txt
-echo. : 用語 'echo.' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプ
-ログラムの名前として認識されません。名前が正しく記述されていることを確認し、パスが含ま
-れている場合はそのパスが正しいことを確認してから、再試行してください。
-発生場所 行:1 文字:1
-+ echo. > hello.txt
-+ ~~~~~
-    + CategoryInfo          : ObjectNotFound: (echo.:String) [], CommandNotFoundExcept 
-   ion
-    + FullyQualifiedErrorId : CommandNotFoundException
- 
-PS C:\Users\093111_226304\git_challenge> touch hello.txt
-touch : 用語 'touch' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプ
-ログラムの名前として認識されません。名前が正しく記述されていることを確認し、パスが含ま
-れている場合はそのパスが正しいことを確認してから、再試行してください。
-発生場所 行:1 文字:1
-+ touch hello.txt
-+ ~~~~~
-    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundExcept 
-   ion
-    + FullyQualifiedErrorId : CommandNotFoundException
- 
-PS C:\Users\093111_226304\git_challenge> type nul > hello_world.txt
-type : パス 'C:\Users\093111_226304\git_challenge\nul' が存在しないため検出できません。
-発生場所 行:1 文字:1
-+ type nul > hello_world.txt
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (C:\Users\093111_226304\git_challenge\nu 
-   l:String) [Get-Content], ItemNotFoundException
-    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCom 
-   mand
- 
-PS C:\Users\093111_226304\git_challenge> git add hello_world.txt
-PS C:\Users\093111_226304\git_challenge> echo hello,world! > hello_world.txt
-PS C:\Users\093111_226304\git_challenge> git add .
-PS C:\Users\093111_226304\git_challenge> git commit "hello_world.txtを追加"
-error: pathspec 'hello_world.txtを追加' did not match any file(s) known to git
-PS C:\Users\093111_226304\git_challenge> git commit -m "hello,world!を追記"
-[main (root-commit) a03eeb4] hello,world!を追記
+PS C:\work> cd C:\work\git_challenge
+PS C:\work\git_challenge> git init
+Initialized empty Git repository in C:/work/git_challenge/.git/
+PS C:\work\git_challenge> echo Hello, world! > hello_world.txt
+PS C:\work\git_challenge> git add hello_world.txt
+PS C:\work\git_challenge> git commit -m "hello_world.txtを追加"
+[main (root-commit) f28acf3] hello_world.txtを追加
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 hello_world.txt
-PS C:\Users\093111_226304\git_challenge> git status
-On branch main
-nothing to commit, working tree clean
-PS C:\Users\093111_226304\git_challenge> git diff --staged
-PS C:\Users\093111_226304\git_challenge> git diff
-PS C:\Users\093111_226304\git_challenge> gut log
-gut : 用語 'gut' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログ
-ラムの名前として認識されません。名前が正しく記述されていることを確認し、パスが含まれて
-いる場合はそのパスが正しいことを確認してから、再試行してください。
-発生場所 行:1 文字:1
-+ gut log
-+ ~~~
-    + CategoryInfo          : ObjectNotFound: (gut:String) [], CommandNotFoundExceptio 
-   n
-    + FullyQualifiedErrorId : CommandNotFoundException
- 
-PS C:\Users\093111_226304\git_challenge> git log
-commit a03eeb4cdc8424f386318f18b008688a624db94d (HEAD -> main)
-Author: kiyohara0408 <kiyohara_kanamu@koushi-intec.co.jp>
-Date:   Fri Apr 24 15:48:37 2026 +0900
-
-    hello,world!を追記
-PS C:\Users\093111_226304\git_challenge>  echo こんにちは、世界! > hello_world.txt 
-PS C:\Users\093111_226304\git_challenge> git add hello_world.txt
-PS C:\Users\093111_226304\git_challenge> echo hello,world! > hello_world.txt
-PS C:\Users\093111_226304\git_challenge> git add .                          
-PS C:\Users\093111_226304\git_challenge> git commit -m "hello,world!を追加"
-On branch main
-nothing to commit, working tree clean
-PS C:\Users\093111_226304\git_challenge> echo こんにちは、世界！ >> hello_world.txt
-PS C:\Users\093111_226304\git_challenge> git add .7
-fatal: pathspec '.7' did not match any files
-PS C:\Users\093111_226304\git_challenge> git add .7
-fatal: pathspec '.7' did not match any files
-PS C:\Users\093111_226304\git_challenge> git add . 
-PS C:\Users\093111_226304\git_challenge> git commit -m "こんにちは、世界！を追加"
-[main bb80e26] こんにちは、世界！を追加
+PS C:\work\git_challenge> echo こんにちは、世界！ >> hello_world.txt
+PS C:\work\git_challenge> git add hello_world.txt
+PS C:\work\git_challenge> git commit -m "日本語訳を追記"
+[main 0b3cc9a] 日本語訳を追記
  1 file changed, 0 insertions(+), 0 deletions(-)
-PS C:\Users\093111_226304\git_challenge> git log
-commit bb80e262b8b3bca6d51f57e3363481792eadc8f6 (HEAD -> main)
-Author: kiyohara0408 <kiyohara_kanamu@koushi-intec.co.jp>
-Date:   Fri Apr 24 15:56:12 2026 +0900
-
-    こんにちは、世界！を追加
-
-commit a03eeb4cdc8424f386318f18b008688a624db94d
-Author: kiyohara0408 <kiyohara_kanamu@koushi-intec.co.jp>
-Date:   Fri Apr 24 15:48:37 2026 +0900
-
-    hello,world!を追記
-PS C:\Users\093111_226304\git_challenge> 
+PS C:\work\git_challenge> git log --oneline
+0b3cc9a (HEAD -> main) 日本語訳を追記
+f28acf3 hello_world.txtを追加
+PS C:\work\git_challenge> 
